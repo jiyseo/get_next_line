@@ -73,9 +73,9 @@ static int	put_line_char(t_line_buffer *plb, char ch)
 
 char	*get_next_line(int fd)
 {
-	int	ch;
-	t_line_buffer	lb;
-	static t_read_buffer	rb[OPEN_MAX] = {{NULL, 0, 0}};
+	int						ch;
+	t_line_buffer			lb;
+	static t_read_buffer	rb[OPEN_MAX];
 
 	if (fd < 0 || fd >= OPEN_MAX || BUFFER_SIZE <= 0)
 		return (NULL);
